@@ -23,13 +23,13 @@ class HUDDefault extends StatelessWidget {
                     Text(
                       'The first 10 primes :',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   if (snapshot.hasData)
                     Text(
-                      snapshot.data,
+                      snapshot.data ?? '',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.subtitle2,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                 ],
               ),

@@ -11,9 +11,9 @@ class HUDUsingPopupCancelable extends StatefulWidget {
 }
 
 class _HUDUsingPopupCancelableState extends State<HUDUsingPopupCancelable> {
-  String resultPrimes1;
-  String resultPrimes2;
-  String resultPrimes3;
+  String? resultPrimes1;
+  String? resultPrimes2;
+  String? resultPrimes3;
 
   bool canceled = false;
 
@@ -87,43 +87,43 @@ class _HUDUsingPopupCancelableState extends State<HUDUsingPopupCancelable> {
               Text(
                 'The first 10 primes :',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             if (resultPrimes1 != null)
               Text(
-                resultPrimes1,
+                resultPrimes1 ?? '',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle2,
+                style: Theme.of(context).textTheme.titleSmall,
               ),
             if (resultPrimes2 != null)
               Text(
                 'The second 10 primes :',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             if (resultPrimes2 != null)
               Text(
-                resultPrimes2,
+                resultPrimes2 ?? '',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle2,
+                style: Theme.of(context).textTheme.titleSmall,
               ),
             if (resultPrimes3 != null)
               Text(
                 'The third 10 primes :',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             if (resultPrimes3 != null)
               Text(
-                resultPrimes3,
+                resultPrimes3 ?? '',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle2,
+                style: Theme.of(context).textTheme.titleSmall,
               ),
             if (canceled)
               Text(
                 'Process canceled',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
           ],
         ),

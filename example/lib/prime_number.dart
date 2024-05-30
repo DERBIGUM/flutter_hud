@@ -19,7 +19,7 @@ Iterable<int> primesMap() {
           bp = bps.current;
           q = bp * bp;
         } else {
-          final int inc = bpmap.remove(n);
+          final int inc = bpmap.remove(n) ?? 0;
           int next = n + inc;
           while (bpmap.containsKey(next)) {
             next += inc;

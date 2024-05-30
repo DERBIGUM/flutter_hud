@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hud/flutter_hud.dart';
 import 'package:flutter_hud/src/helper.dart';
@@ -110,7 +109,7 @@ class _PopupHUD extends ModalRoute<void> {
           return Text(
             _label!,
             style: _hud.labelStyle ??
-                Theme.of(context).textTheme.headline6!.copyWith(
+                Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: Colors.white,
                     ),
           );
@@ -126,7 +125,7 @@ class _PopupHUD extends ModalRoute<void> {
           return Text(
             _detailLabel!,
             style: _hud.detailLabelStyle ??
-                Theme.of(context).textTheme.subtitle2!.copyWith(
+                Theme.of(context).textTheme.titleSmall!.copyWith(
                       color: Colors.white70,
                     ),
           );

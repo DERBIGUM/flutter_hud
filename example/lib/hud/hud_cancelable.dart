@@ -12,7 +12,7 @@ class HUDWithCancelable extends StatefulWidget {
 class _HUDWithCancelableState extends State<HUDWithCancelable> {
   bool showHUD = true;
   bool canceled = false;
-  String resultPrimes;
+  String? resultPrimes;
 
   @override
   void initState() {
@@ -64,19 +64,19 @@ class _HUDWithCancelableState extends State<HUDWithCancelable> {
                 Text(
                   'The first 10 primes :',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               if (!showHUD && !canceled)
                 Text(
-                  resultPrimes,
+                  resultPrimes ?? '',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
               if (!showHUD && canceled)
                 Text(
                   'Process canceled',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
             ],
           ),

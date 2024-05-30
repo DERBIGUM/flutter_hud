@@ -6,7 +6,6 @@ import 'package:example/hud/hud_popup.dart';
 import 'package:example/hud/hud_popup_cancelable.dart';
 import 'package:example/hud/hud_popup_progress.dart';
 import 'package:example/hud/hud_progress.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -106,9 +105,9 @@ class TileGroup extends StatelessWidget {
 
 class TileItem extends StatelessWidget {
   TileItem({
-    this.label,
-    this.description,
-    this.builder,
+    required this.label,
+    required this.description,
+    required this.builder,
   });
 
   final String label;

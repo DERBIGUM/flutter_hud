@@ -11,8 +11,8 @@ class HUDWidgetProgress extends StatefulWidget {
 
 class _HUDWidgetProgressState extends State<HUDWidgetProgress> {
   bool showHUD = true;
-  double value;
-  String resultPrimes;
+  double? value;
+  String? resultPrimes;
 
   @override
   void initState() {
@@ -58,7 +58,7 @@ class _HUDWidgetProgressState extends State<HUDWidgetProgress> {
         label: 'Generating Primes',
         detailLabel: value == null
             ? 'Initializing..'
-            : 'Progress ${(value * 100).toInt()}%',
+            : 'Progress ${((value ?? 0) * 100).toInt()}%',
       ),
       builder: (context) => Scaffold(
         appBar: AppBar(
@@ -72,13 +72,13 @@ class _HUDWidgetProgressState extends State<HUDWidgetProgress> {
                 Text(
                   'The first 10 primes :',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               if (!showHUD)
                 Text(
-                  resultPrimes,
+                  resultPrimes ?? '',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
             ],
           ),

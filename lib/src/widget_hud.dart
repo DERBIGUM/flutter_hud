@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hud/src/helper.dart';
 import 'package:flutter_hud/src/hud.dart';
@@ -67,14 +66,14 @@ class WidgetHUD extends StatelessWidget {
                   Text(
                     hud.label!,
                     style: hud.labelStyle ??
-                        textTheme.headline6!.copyWith(color: Colors.white),
+                        textTheme.titleLarge!.copyWith(color: Colors.white),
                   ),
                 if (hud.detailLabel != null) SizedBox(height: 4),
                 if (hud.detailLabel != null)
                   Text(
                     hud.detailLabel!,
                     style: hud.detailLabelStyle ??
-                        textTheme.subtitle2!.copyWith(color: Colors.white70),
+                        textTheme.titleSmall!.copyWith(color: Colors.white70),
                   ),
                 if (onCancel != null) SizedBox(height: 16),
                 if (onCancel != null) CancelButton(onCancel: onCancel!),
